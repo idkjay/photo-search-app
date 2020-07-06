@@ -2,7 +2,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
-} */
+}
 
 .background-pic {
     background-position: center;
@@ -13,6 +13,7 @@
 
 .search-form {
     top: 0;
+    left: 0;
     margin: auto;
     height: 100%;
     width: 100%;

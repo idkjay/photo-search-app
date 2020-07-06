@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-const Picture = ({picture}) => {
-     const [ show, setShow ] = useState(false);
+const Picture = ({results}) => {
 
-    const showShow = () => {
-        setShow(true)
 
-    }
+
     return(
         <div className="picture">
-            <img className="image" src={picture.image} alt="" />
-            {show}
+            <img className="image" src={results.urls.raw} alt="" />
+
         </div>
     )
 }

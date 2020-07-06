@@ -12,6 +12,7 @@ function App() {
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('travel');
   const [background, setBackground] = useState(true)
+  const [searchbar, setSearchbar] = useState(true)
 
    useEffect(() => {
      getPictures();
@@ -19,9 +20,9 @@ function App() {
    }, [query]);
 
    const getPictures = async () => {
-     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
+     const response = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${query}&per_page=30&client_id=${unsplashAccessKey}`);
      const data = await response.json();
-     setPictures(data.hits);
+     setPictures(data.results);
    };
 
   const updateSearch = (event) => {
@@ -32,6 +33,8 @@ function App() {
     event.preventDefault();
     setQuery(search);
     setSearch('');
+    setBackground(false)
+    setSearchbar(false)
   };
 
   return (
@@ -41,20 +44,24 @@ function App() {
           <img className="background-pic" src="https://cdn.kapwing.com/final_5e51a3107818cb00168bd148_236835.gif"></img>
         </div>
       }
+      {searchbar &&
+        <form onSubmit={getSearch} className="search-form">
+          <input
+            className="search-bar"
+            type="text"
+            value={search}
+            onChange={updateSearch}
+            placeholder="Search Images"
+          />
+        </form>
+      }
 
-      <form onSubmit={getSearch} className="search-form">
-        <input
-          className="search-bar"
-          type="text"
-          value={search}
-          onChange={updateSearch}
-          placeholder="Search Images"
-        />
-      </form>
 
       <div className="pictures">
-        {pictures.map((picture) => (
-          <Picture picture={picture} />
+        {pictures.map((results) => (
+          <Picture 
+            results={results} 
+          />
         ))}
       </div>
     </div>
