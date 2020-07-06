@@ -1,29 +1,26 @@
 .app {
     height: 100%;
     width: 100%;
-    position: relative;
-}
+    position: fixed;
+} */
 
 .background-pic {
-    /* background-position: center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     position: relative;
 }
 
 .search-form {
-    text-align: center;
-
     top: 0;
-    left: 0;
+    margin: auto;
     height: 100%;
     width: 100%;
     position: absolute;
-
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .search-bar {
@@ -31,8 +28,7 @@
     border: none;
     padding: 10px;
     background: #fff;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 5px;
     box-shadow: 0px 0px 3px rgb(71, 71, 71);
 }
 
