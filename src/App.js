@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './mintbean.png';
-import './styles/index.css';
+import React, { useState, useEffect } from "react";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
+import PictureTile from "./components/PictureTile.js"
 
 function App() {
+  const [background, setBackground] = useState(true);
+
   return (
-    <div className="App">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <code>App.js</code> is the entrypoint to your app.
-        </p>
-        <h2>HAPPY HACKING!</h2>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="background">
+      <section className="section">
+        {background &&
+          <img className="background" src="https://cdn.kapwing.com/final_5e51a3107818cb00168bd148_236835.gif"></img>
+        }
+      </section>
     </div>
-  );
+  )
 }
 
 export default App;
