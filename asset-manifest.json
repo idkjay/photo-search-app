@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/photo-search-app/static/css/main.75df9f48.chunk.css",
+    "main.js": "/photo-search-app/static/js/main.5ab53ae2.chunk.js",
+    "main.js.map": "/photo-search-app/static/js/main.5ab53ae2.chunk.js.map",
+    "runtime-main.js": "/photo-search-app/static/js/runtime-main.e5a434d9.js",
+    "runtime-main.js.map": "/photo-search-app/static/js/runtime-main.e5a434d9.js.map",
+    "static/js/2.f28b6ff8.chunk.js": "/photo-search-app/static/js/2.f28b6ff8.chunk.js",
+    "static/js/2.f28b6ff8.chunk.js.map": "/photo-search-app/static/js/2.f28b6ff8.chunk.js.map",
+    "index.html": "/photo-search-app/index.html",
+    "precache-manifest.4b7869f40fd78bc394ecbe676445f9fd.js": "/photo-search-app/precache-manifest.4b7869f40fd78bc394ecbe676445f9fd.js",
+    "service-worker.js": "/photo-search-app/service-worker.js",
+    "static/css/main.75df9f48.chunk.css.map": "/photo-search-app/static/css/main.75df9f48.chunk.css.map",
+    "static/js/2.f28b6ff8.chunk.js.LICENSE.txt": "/photo-search-app/static/js/2.f28b6ff8.chunk.js.LICENSE.txt",
+    "static/media/mintbean.png": "/photo-search-app/static/media/mintbean.cf18b629.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5a434d9.js",
+    "static/js/2.f28b6ff8.chunk.js",
+    "static/css/main.75df9f48.chunk.css",
+    "static/js/main.5ab53ae2.chunk.js"
+  ]
+}
