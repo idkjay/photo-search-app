@@ -8,11 +8,11 @@ function App() {
   const APP_ID = '30cd12a7';
   const APP_KEY = '8384a09737074e2b9dace4d37a377de1';
 
+  const [query, setQuery] = useState('');
   const [pictures, setPictures] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('travel');
   const [background, setBackground] = useState(true)
-  const [searchbar, setSearchbar] = useState(true)
+  // const [searchbar, setSearchbar] = useState(true)
 
    useEffect(() => {
      getPictures();
@@ -34,7 +34,7 @@ function App() {
     setQuery(search);
     setSearch('');
     setBackground(false)
-    setSearchbar(false)
+    // setSearchbar(false)
   };
 
   return (
@@ -44,26 +44,20 @@ function App() {
           <img className="background-pic" src="https://cdn.kapwing.com/final_5e51a3107818cb00168bd148_236835.gif"></img>
         </div>
       }
-      {searchbar &&
-        <form onSubmit={getSearch} className="search-form">
-          <input
-            className="search-bar"
-            type="text"
-            value={search}
-            onChange={updateSearch}
-            placeholder="Search Images"
-          />
-        </form>
-      }
 
+      <form onSubmit={getSearch} className="search-form">
+        <input
+          className="search-bar"
+          type="text"
+          value={search}
+          onChange={updateSearch}
+          placeholder="Search Images"
+        />
+      </form>
 
-      <div className="pictures">
-        {pictures.map((results) => (
-          <Picture 
-            results={results} 
-          />
+      {pictures.map((photo) => (
+          <img src={photo.urls.small} alt={photo.alt_description}/>
         ))}
-      </div>
     </div>
   )
 }

@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
+import "../styles/App.css";
+import Gallery from 'react-grid-gallery';
+import { render } from 'react-dom';
+
+
 
 const Picture = ({results}) => {
-
-
-
     return(
-        <div className="picture">
-            <img className="image" src={results.urls.raw} alt="" />
 
-        </div>
+        <Gallery
+            images={results.urls.raw}
+        />
     )
 }
 
