@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './styles/App.css';
 import Footer from './components/Footer';
+import Gallery from "react-grid-gallery";
 
 function App() {
   const unsplashAccessKey = 'XRaYqLejjhPT9zoUTCabwHUTLeJ8r69hbSQbMi76bMM';
@@ -34,7 +35,7 @@ function App() {
     setQuery(search);
     setSearch('');
     setBackground(false)
-    // setSearchbar(false)
+
   };
 
   return (
@@ -52,9 +53,20 @@ function App() {
         </form>
 
       </div>
-        {pictures.map((photo) => (
-            <img src={photo.urls.small} alt={photo.alt_description}/>
-          ))}
+      <div className="photo">
+          {pictures.length === 0
+            ? null
+            : pictures.map((photo) => {
+                return (
+                  <img
+                    src={photo.urls.small}
+                    alt="photos of searched"
+                    style={{ width: "100%" }}
+                  />
+                );
+              })}
+        </div>
+
 
 
       <Footer />
