@@ -1,0 +1,27 @@
+.main-footer {
+    color: #fff;
+    background-color: #dc3545;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 1.7rem;
+}
+
+h4 {
+    margin-bottom: 1.5rem;
+}
+.creator {
+    color: #fff;
+    margin: .5rem;
+}
+
+.creator:hover, .name:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.name {
+    color: #fff;
+}

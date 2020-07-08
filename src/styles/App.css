@@ -1,23 +1,13 @@
-.app {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-}
 
-.background-pic {
+
+/* .background-pic {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-}
+} */
 
 .search-form {
-    top: 0;
-    left: 0;
-    margin: auto;
-    height: 100%;
-    width: 100%; 
-    position: absolute;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -27,15 +17,26 @@
 .search-bar {
     width: 50%;
     border: none;
-    padding: 10px;
+    padding: 20px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0px 0px 3px rgb(71, 71, 71);
+    text-align: center;
 }
 
-.image {
+/* .image {
     display: inline-grid;
     font-size: 30px;
     grid-gap: 1em;
     margin: 15px;
+} */
+
+.header {
+    background-image: url("https://cdn.kapwing.com/final_5e51a3107818cb00168bd148_236835.gif");
+    padding: 100px;
+    text-align: center;
+    color: black;
+    font-size: 30px;
 }
+
+

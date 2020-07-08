@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './styles/App.css';
-import Picture from './components/Picture.js'
+import Footer from './components/Footer';
 
 function App() {
   const unsplashAccessKey = 'XRaYqLejjhPT9zoUTCabwHUTLeJ8r69hbSQbMi76bMM';
@@ -39,25 +39,26 @@ function App() {
 
   return (
     <div className="app">
-      {background &&
-        <div>
-          <img className="background-pic" src="https://cdn.kapwing.com/final_5e51a3107818cb00168bd148_236835.gif"></img>
-        </div>
-      }
+      <div className="header">
+        <h1>Image Searcher</h1>
+        <form onSubmit={getSearch} className="search-form">
+          <input
+            className="search-bar"
+            type="text"
+            value={search}
+            onChange={updateSearch}
+            placeholder="Search Images"
+          />
+        </form>
 
-      <form onSubmit={getSearch} className="search-form">
-        <input
-          className="search-bar"
-          type="text"
-          value={search}
-          onChange={updateSearch}
-          placeholder="Search Images"
-        />
-      </form>
+      </div>
+        {pictures.map((photo) => (
+            <img src={photo.urls.small} alt={photo.alt_description}/>
+          ))}
 
-      {pictures.map((photo) => (
-          <img src={photo.urls.small} alt={photo.alt_description}/>
-        ))}
+
+      <Footer />
+
     </div>
   )
 }
