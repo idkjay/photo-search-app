@@ -1,17 +1,12 @@
-
-
-/* .background-pic {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-} */
-
-
 .App {
     background-color: #0D111C;
     width: 100%;
     min-height: 100vh;
+}
+
+.camera {
+    width: 12%;
+    margin-bottom: -100px;
 }
 
 .search-form {
@@ -21,57 +16,55 @@
     align-items: center;
 }
 
+h1 {
+    font-family: 'Bebas Neue';
+    font-size: 5em;
+    letter-spacing: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .search-bar {
-    width: 50%;
+    width: 60%;
     border: none;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0px 0px 3px rgb(71, 71, 71);
     text-align: center;
+    margin-top: -12.5em;
+    position: relative;
+
 }
 
+.search-form i {
+    position: relative;
+    z-index: 1;
+    bottom: 83px;
+    left: 15px;
+    color: #7B7B7B;
+    cursor: pointer;
+    width: 0;
+}
 
 .header {
-    padding: 100px;
+    padding: 40px;
     text-align: center;
     color: white;
     font-size: 30px;
 }
-/* 
-.photo-grid {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 -8px -8px 0;
-      li {
-            height: 20vh;
-            flex-grow: 1;
-            margin: 0 8px 8px 0;
-      }
-      li:last-child {
-            flex-grow: 10;
-      }
-      img {
-            max-height: 100%;
-            min-width: 100%;
-            object-fit: cover;
-            vertical-align: bottom;
-            border-radius: 4px;
-      }
-} */
 
 .photo-grid {
-    columns: 300px 5;
+    columns: 200px 5;
     width: 100%;
-    grid-gap: 0px 0px;
-    vertical-align: bottom;
+    grid-gap: 5px;
 }
 
 .photo-grid .background {
     object-fit: cover;
-    /* width: 95.75vw;
-    height: 100vh;
-    border: 15px solid #0D111C; */
     text-align: center;
     display: flex;
     justify-content: center;

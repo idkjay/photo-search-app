@@ -36,8 +36,11 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <h1>Unsplash Bot</h1>
+        <img className="camera" src="https://i.imgur.com/Wp8kohD.png"></img>
+        <h1>Camera Roll</h1>
         <form onSubmit={getSearch} className="search-form">
+          <i onClick={getSearch} class="fa fa-search" type="submit"></i>
+
           <input
             className="search-bar"
             type="text"
@@ -45,8 +48,8 @@ function App() {
             onChange={updateSearch}
             placeholder="Search Photos on Unsplash"
           />
-        </form>
 
+        </form>
       </div>
       <div className="photo-grid">
         {background &&
@@ -58,13 +61,11 @@ function App() {
               src={photo.urls.small}
               alt="photos of searched"
               style={{ width: "100%" }}
+              className="images"
             />
           );
         })}
       </div>
-
-
-
       <Footer />
     </div>
   )
