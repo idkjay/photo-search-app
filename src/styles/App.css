@@ -7,6 +7,13 @@
     position: relative;
 } */
 
+
+.App {
+    background-color: #0D111C;
+    width: 100%;
+    min-height: 100vh;
+}
+
 .search-form {
     text-align: center;
     display: flex;
@@ -24,20 +31,12 @@
     text-align: center;
 }
 
-/* .image {
-    display: inline-grid;
-    font-size: 30px;
-    grid-gap: 1em;
-    margin: 15px;
-} */
 
 .header {
-    background-image: url("https://cdn.kapwing.com/final_5e51a3107818cb00168bd148_236835.gif");
     padding: 100px;
     text-align: center;
-    color: black;
+    color: white;
     font-size: 30px;
-    margin-bottom: 10px;
 }
 /* 
 .photo-grid {
@@ -61,12 +60,20 @@
       }
 } */
 
-.photo {
-    width: 100vw;
-    /* height: 90vh; */
-    /* display: flex; */
-    /* flex: 2; */
-    /* flex-wrap: wrap; */
-    columns: 300px 4;
-    margin-top: 10px;
+.photo-grid {
+    columns: 300px 5;
+    width: 100%;
+    grid-gap: 0px 0px;
+    vertical-align: bottom;
+}
+
+.photo-grid .background {
+    object-fit: cover;
+    /* width: 95.75vw;
+    height: 100vh;
+    border: 15px solid #0D111C; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

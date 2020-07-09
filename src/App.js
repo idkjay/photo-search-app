@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
 import './styles/App.css';
 import Footer from './components/Footer';
-import Gallery from "react-grid-gallery";
 
 function App() {
   const unsplashAccessKey = 'XRaYqLejjhPT9zoUTCabwHUTLeJ8r69hbSQbMi76bMM';
   const unsplashSecretKey = '6JiHkmSXYzWQ2MrqWj692DgFVl55IW4g1O09NNJZDnE';
-  const APP_ID = '30cd12a7';
-  const APP_KEY = '8384a09737074e2b9dace4d37a377de1';
 
   const [query, setQuery] = useState('');
   const [pictures, setPictures] = useState([]);
   const [search, setSearch] = useState('');
   const [background, setBackground] = useState(true)
-  // const [searchbar, setSearchbar] = useState(true)
 
    useEffect(() => {
      getPictures();
@@ -35,42 +31,41 @@ function App() {
     setQuery(search);
     setSearch('');
     setBackground(false)
-
   };
 
   return (
-    <div className="app">
+    <div className="App">
       <div className="header">
-        <h1>Image Searcher</h1>
+        <h1>Unsplash Bot</h1>
         <form onSubmit={getSearch} className="search-form">
           <input
             className="search-bar"
             type="text"
             value={search}
             onChange={updateSearch}
-            placeholder="Search Images"
+            placeholder="Search Photos on Unsplash"
           />
         </form>
 
       </div>
-      <div className="photo">
-          {pictures.length === 0
-            ? null
-            : pictures.map((photo) => {
-                return (
-                  <img
-                    src={photo.urls.small}
-                    alt="photos of searched"
-                    style={{ width: "100%" }}
-                  />
-                );
-              })}
-        </div>
+      <div className="photo-grid">
+        {background &&
+          <img className="background" src="https://cdn.kapwing.com/final_5e51a3107818cb00168bd148_236835.gif"></img>
+        }
+        {pictures.length === 0 ? null : pictures.map((photo) => {
+          return (
+            <img
+              src={photo.urls.small}
+              alt="photos of searched"
+              style={{ width: "100%" }}
+            />
+          );
+        })}
+      </div>
 
 
 
       <Footer />
-
     </div>
   )
 }

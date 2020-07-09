@@ -1,17 +1,15 @@
 .main-footer {
     color: #fff;
-    background-color: #dc3545;
+    background-color: #0D111C;
     padding-top: 3em;
-    position: relative;
-    bottom: 0;
     width: 100%;
     text-align: center;
     margin-top: 1.7rem;
+    overflow: hidden;
+    padding-bottom: 30px;
 }
 
-h4 {
-    margin-bottom: 1.5rem;
-}
+
 .creator {
     color: #fff;
     margin: .5rem;
@@ -24,4 +22,8 @@ h4 {
 
 .name {
     color: #fff;
+}
+
+hr {
+    width: 90%;
 }

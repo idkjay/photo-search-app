@@ -5,6 +5,7 @@ const Footer = () => {
 
     return (
       <div className="main-footer">
+        <hr/>
         <div className="container">
           <div className="row">
             <div className="col">
@@ -16,7 +17,6 @@ const Footer = () => {
                 <a class="creator "href="https://github.com/idkjay"><i class="fa fa-github-square fa-2x"></i></a>
             </div>
           </div>
-          <hr />
           <div className="row">
             <p className="col-sm">
               &copy;
