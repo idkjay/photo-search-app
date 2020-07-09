@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import './styles/App.css';
 import Footer from './components/Footer';
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 function App() {
   const unsplashAccessKey = 'XRaYqLejjhPT9zoUTCabwHUTLeJ8r69hbSQbMi76bMM';
@@ -9,7 +11,9 @@ function App() {
   const [query, setQuery] = useState('');
   const [pictures, setPictures] = useState([]);
   const [search, setSearch] = useState('');
-  const [background, setBackground] = useState(true)
+  const [background, setBackground] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
 
    useEffect(() => {
      getPictures();
@@ -55,17 +59,36 @@ function App() {
         {background &&
           <img className="background" src="https://cdn.kapwing.com/final_5e51a3107818cb00168bd148_236835.gif"></img>
         }
-        {pictures.length === 0 ? null : pictures.map((photo) => {
+        {pictures.length === 0 ? null : pictures.map((photo, index) => {
           return (
-            <img
-              src={photo.urls.small}
-              alt="photos of searched"
-              style={{ width: "100%" }}
-              className="images"
-            />
+            <div onClick={() => {setIsOpen(true); setPhotoIndex(index)}}>
+
+              <img
+                src={photo.urls.small}
+                alt="photos of searched"
+                style={{ width: "100%" }}
+                className="images"
+              />
+            </div>
           );
         })}
       </div>
+      {isOpen &&
+        <Lightbox
+            mainSrc={pictures[photoIndex].urls.raw}
+            nextSrc={pictures[(photoIndex + 1) % pictures.length].urls.raw}
+            prevSrc={pictures[(photoIndex + pictures.length - 1) % pictures.length].urls.raw}
+            onCloseRequest={() => (setIsOpen(false))}
+            onMovePrevRequest={() =>
+                setPhotoIndex((photoIndex + pictures.length - 1) % pictures.length)
+            }
+            onMoveNextRequest={() =>
+                setPhotoIndex((photoIndex + 1) % pictures.length)
+            }
+            imageTitle={<a href={pictures[photoIndex].user.links.html}><i className="fa fa-camera"></i> {pictures[photoIndex].user.name} on Unsplash</a>}
+            imageCaption={pictures[photoIndex].description}
+        />
+      }
       <Footer />
     </div>
   )
