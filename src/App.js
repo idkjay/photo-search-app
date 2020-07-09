@@ -44,7 +44,6 @@ function App() {
         <h1>Camera Roll</h1>
         <form onSubmit={getSearch} className="search-form">
           <i onClick={getSearch} class="fa fa-search" type="submit"></i>
-
           <input
             className="search-bar"
             type="text"
@@ -52,7 +51,6 @@ function App() {
             onChange={updateSearch}
             placeholder="Search Photos on Unsplash"
           />
-
         </form>
       </div>
       <div className="photo-grid">

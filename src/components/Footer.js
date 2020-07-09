@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="row">
             <div className="col">
               <h4>
-                Search up photos using the Unsplash API.
+                Search photos using the Unsplash API.
               </h4>
                 <a className="creator" href="https://www.linkedin.com/in/jordanchu1995/"><i className="fa fa-linkedin-square fa-2x"></i></a>
                 <a class="creator "href="http://jordanchu.xyz"><i class="fa fa-code fa-2x"></i></a>
