@@ -6,7 +6,6 @@ import "react-image-lightbox/style.css";
 
 function App() {
   const unsplashAccessKey = 'XRaYqLejjhPT9zoUTCabwHUTLeJ8r69hbSQbMi76bMM';
-
   const [query, setQuery] = useState('');
   const [pictures, setPictures] = useState([]);
   const [search, setSearch] = useState('');
@@ -39,8 +38,8 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <img className="camera" src="https://i.imgur.com/Wp8kohD.png"></img>
-        <h1>Camera Roll</h1>
+        <a href="/" id="logo"><img className="camera" src="https://i.imgur.com/Wp8kohD.png"></img></a>
+        <a href="/"><h1>Camera Roll</h1></a>
         <form onSubmit={getSearch} className="search-form">
           <i onClick={getSearch} class="fa fa-search" type="submit"></i>
           <input
@@ -81,7 +80,7 @@ function App() {
             onMoveNextRequest={() =>
                 setPhotoIndex((photoIndex + 1) % pictures.length)
             }
-            imageTitle={<a href={pictures[photoIndex].user.links.html}><i className="fa fa-camera"></i> {pictures[photoIndex].user.name} on Unsplash</a>}
+            imageTitle={<a className="unsplash-user" href={pictures[photoIndex].user.links.html}><i className="fa fa-camera"></i> {pictures[photoIndex].user.name} on Unsplash</a>}
             imageCaption={pictures[photoIndex].description}
         />
       }

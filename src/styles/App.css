@@ -41,7 +41,7 @@ h1 {
 .search-form i {
     position: relative;
     z-index: 1;
-    bottom: 83px;
+    bottom: 80px;
     left: 15px;
     color: #7B7B7B;
     cursor: pointer;
@@ -71,8 +71,12 @@ h1 {
 }
 
 a {
-    color: white;
+    color: #fff;
     text-decoration: none;
+}
+
+.unsplash-user:hover {
+    color: #7B7B7B;
 }
 
 @media only screen and (max-width: 900px) {
