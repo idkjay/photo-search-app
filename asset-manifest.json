@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/photo-search-app/static/css/main.41caf0ee.chunk.css",
-    "main.js": "/photo-search-app/static/js/main.f56929ba.chunk.js",
-    "main.js.map": "/photo-search-app/static/js/main.f56929ba.chunk.js.map",
-    "runtime-main.js": "/photo-search-app/static/js/runtime-main.b6428bef.js",
-    "runtime-main.js.map": "/photo-search-app/static/js/runtime-main.b6428bef.js.map",
-    "static/css/2.9522b9fe.chunk.css": "/photo-search-app/static/css/2.9522b9fe.chunk.css",
-    "static/js/2.ffe78688.chunk.js": "/photo-search-app/static/js/2.ffe78688.chunk.js",
-    "static/js/2.ffe78688.chunk.js.map": "/photo-search-app/static/js/2.ffe78688.chunk.js.map",
-    "index.html": "/photo-search-app/index.html",
-    "precache-manifest.e450c8648c22f3ff7a8af103cd30a421.js": "/photo-search-app/precache-manifest.e450c8648c22f3ff7a8af103cd30a421.js",
-    "service-worker.js": "/photo-search-app/service-worker.js",
-    "static/css/2.9522b9fe.chunk.css.map": "/photo-search-app/static/css/2.9522b9fe.chunk.css.map",
-    "static/css/main.41caf0ee.chunk.css.map": "/photo-search-app/static/css/main.41caf0ee.chunk.css.map",
-    "static/js/2.ffe78688.chunk.js.LICENSE.txt": "/photo-search-app/static/js/2.ffe78688.chunk.js.LICENSE.txt"
+    "main.css": "/camera-roll/static/css/main.488abd9a.chunk.css",
+    "main.js": "/camera-roll/static/js/main.9e953fec.chunk.js",
+    "main.js.map": "/camera-roll/static/js/main.9e953fec.chunk.js.map",
+    "runtime-main.js": "/camera-roll/static/js/runtime-main.e4370cd3.js",
+    "runtime-main.js.map": "/camera-roll/static/js/runtime-main.e4370cd3.js.map",
+    "static/css/2.9522b9fe.chunk.css": "/camera-roll/static/css/2.9522b9fe.chunk.css",
+    "static/js/2.ffe78688.chunk.js": "/camera-roll/static/js/2.ffe78688.chunk.js",
+    "static/js/2.ffe78688.chunk.js.map": "/camera-roll/static/js/2.ffe78688.chunk.js.map",
+    "index.html": "/camera-roll/index.html",
+    "precache-manifest.aaad844c2fbaebb1d1a0a95a28d976dd.js": "/camera-roll/precache-manifest.aaad844c2fbaebb1d1a0a95a28d976dd.js",
+    "service-worker.js": "/camera-roll/service-worker.js",
+    "static/css/2.9522b9fe.chunk.css.map": "/camera-roll/static/css/2.9522b9fe.chunk.css.map",
+    "static/css/main.488abd9a.chunk.css.map": "/camera-roll/static/css/main.488abd9a.chunk.css.map",
+    "static/js/2.ffe78688.chunk.js.LICENSE.txt": "/camera-roll/static/js/2.ffe78688.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b6428bef.js",
+    "static/js/runtime-main.e4370cd3.js",
     "static/css/2.9522b9fe.chunk.css",
     "static/js/2.ffe78688.chunk.js",
-    "static/css/main.41caf0ee.chunk.css",
-    "static/js/main.f56929ba.chunk.js"
+    "static/css/main.488abd9a.chunk.css",
+    "static/js/main.9e953fec.chunk.js"
   ]
 }
