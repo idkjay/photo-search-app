@@ -6,7 +6,6 @@ import "react-image-lightbox/style.css";
 
 function App() {
   const unsplashAccessKey = 'XRaYqLejjhPT9zoUTCabwHUTLeJ8r69hbSQbMi76bMM';
-  const unsplashSecretKey = '6JiHkmSXYzWQ2MrqWj692DgFVl55IW4g1O09NNJZDnE';
 
   const [query, setQuery] = useState('');
   const [pictures, setPictures] = useState([]);
@@ -44,7 +43,6 @@ function App() {
         <h1>Camera Roll</h1>
         <form onSubmit={getSearch} className="search-form">
           <i onClick={getSearch} class="fa fa-search" type="submit"></i>
-
           <input
             className="search-bar"
             type="text"
@@ -52,7 +50,6 @@ function App() {
             onChange={updateSearch}
             placeholder="Search Photos on Unsplash"
           />
-
         </form>
       </div>
       <div className="photo-grid">
@@ -62,7 +59,6 @@ function App() {
         {pictures.length === 0 ? null : pictures.map((photo, index) => {
           return (
             <div onClick={() => {setIsOpen(true); setPhotoIndex(index)}}>
-
               <img
                 src={photo.urls.small}
                 alt="photos of searched"
