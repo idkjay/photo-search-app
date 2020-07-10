@@ -48,7 +48,7 @@ function App() {
             type="text"
             value={search}
             onChange={updateSearch}
-            placeholder="Search Photos on Unsplash"
+            placeholder="Search Photos"
           />
         </form>
       </div>

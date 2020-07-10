@@ -24,7 +24,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .search-bar {
@@ -35,9 +34,8 @@ h1 {
     border-radius: 5px;
     box-shadow: 0px 0px 3px rgb(71, 71, 71);
     text-align: center;
-    margin-top: -12.5em;
+    margin-top: -12em;
     position: relative;
-
 }
 
 .search-form i {
@@ -60,7 +58,7 @@ h1 {
 .photo-grid {
     columns: 200px 5;
     width: 100%;
-    grid-gap: 5px;
+    grid-gap: 4px;
 }
 
 .photo-grid .background {
@@ -69,9 +67,28 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 30px;
 }
 
 a {
     color: white;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .camera {
+        width: 30%;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    
+    h1 {
+        padding: 30px;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .search-form {
+        padding-top: 15px;
+    }
 }
