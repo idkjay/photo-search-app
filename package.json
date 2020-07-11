@@ -1,6 +1,6 @@
 {
-  "name": "photo-search-app",
-  "homepage": "http://idkjay.github.io/photo-search-app/",
+  "name": "camera-roll",
+  "homepage": "https://www.idkjay.github.io/camera-roll/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
