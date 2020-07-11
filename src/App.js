@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <a href="/" id="logo"><img className="camera" src="https://i.imgur.com/Wp8kohD.png"></img></a>
+        <a href="/" id="logo"><img className="camera" alt="logo" src="https://i.imgur.com/Wp8kohD.png"></img></a>
         <a href="/"><h1>Camera Roll</h1></a>
         <form onSubmit={getSearch} className="search-form">
           <i onClick={getSearch} class="fa fa-search" type="submit"></i>
@@ -53,7 +53,7 @@ function App() {
       </div>
       <div className="photo-grid">
         {background &&
-          <img className="background" src="https://cdn.kapwing.com/final_5e51a3107818cb00168bd148_236835.gif"></img>
+          <img className="background" src="https://cdn.kapwing.com/final_5e51a3107818cb00168bd148_236835.gif" alt="background"></img>
         }
         {pictures.length === 0 ? null : pictures.map((photo, index) => {
           return (
